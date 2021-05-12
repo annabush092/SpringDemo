@@ -18,7 +18,12 @@ public class DemoApplication {
 	@GetMapping("/hello")
 	public String hello(@RequestParam(value = "name", defaultValue = "World") String name, Model model) {
 		model.addAttribute("name", name);
-		return "hello-world";
+		return "hello";
+	}
+
+	@GetMapping("/vending-machine")
+	public String vendingMachine(Model model) {
+		return "vending-machine";
 	}
 
 }
