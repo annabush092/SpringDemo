@@ -1,5 +1,7 @@
 package com.annabush.demo;
 
+import java.util.*;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
@@ -23,6 +25,9 @@ public class DemoApplication {
 
 	@GetMapping("/vending-machine")
 	public String vendingMachine(Model model) {
+		VendingMachine vm = new VendingMachine();
+		model.addAttribute("vendingMachine", vm);
+		
 		return "vending-machine";
 	}
 

@@ -8,6 +8,7 @@ public class VendingMachine {
 
     public VendingMachine() {
         items = new ArrayList<String>();
+        add3Items();
     }
 
     public void powerButton() {
@@ -30,8 +31,21 @@ public class VendingMachine {
         items.remove(i);
     }
 
+    public ArrayList<String> getItems() {
+        return items;
+    }
+
     public boolean itemsInclude(String item) {
         return items.contains(item);
+    }
+
+    private void add3Items() {
+        ArrayList<String> newItems = new ArrayList<String>();
+        newItems.add("candy");
+        newItems.add("granola bar");
+        newItems.add("peanuts");
+
+        this.addItems(newItems);
     }
 
 }

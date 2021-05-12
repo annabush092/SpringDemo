@@ -29,8 +29,6 @@ public class VendingMachineTest {
 
     @Test
     public void vmCanAddItems() {
-        add3Items();
-
         assertTrue(vm.numItems() == 3);
 
         ArrayList<String> secondAddition = new ArrayList<String>();
@@ -43,8 +41,7 @@ public class VendingMachineTest {
 
     @Test
     public void vmCanRemoveItems() throws IOException {
-
-        add3Items();
+        assertTrue(vm.numItems() == 3);
 
         vm.removeItemAt(1);
 
@@ -52,12 +49,12 @@ public class VendingMachineTest {
         assertFalse(vm.itemsInclude("granola bar"));
     }
 
-    private void add3Items() {
-        ArrayList<String> newItems = new ArrayList<String>();
-        newItems.add("candy");
-        newItems.add("granola bar");
-        newItems.add("peanuts");
+    @Test
+    public void vmCanListItems() {
+        assertTrue(vm.numItems() == 3);
 
-        vm.addItems(newItems);
+        ArrayList<String> items = vm.getItems();
+        assertTrue(items.size() == 3);
     }
+
 }

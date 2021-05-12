@@ -1,3 +1,20 @@
 body {
-    background-color: $ltblue;
+    background-color: $black;
+    color: $screenblue;
+
+    table {
+        td {
+            color: $white;
+        }
+        
+        td:first-child {
+            div {
+                border-radius: 5px;
+                background-color: $silver;
+                color: $black;
+                min-width: 40px;
+                text-align: center;
+            }
+        }
+    }
 }

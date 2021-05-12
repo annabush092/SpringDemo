@@ -1,4 +1,13 @@
 body {
-  background-color: lightblue; }
+  background-color: black;
+  color: lightblue; }
+  body table td {
+    color: white; }
+  body table td:first-child div {
+    border-radius: 5px;
+    background-color: silver;
+    color: black;
+    min-width: 40px;
+    text-align: center; }
 
 /*# sourceMappingURL=main.css.map */

@@ -15,6 +15,17 @@
 <body>
     <h2>Hi, I am a vending machine! How may I help you today?</h2>
 
+    <h3 th:if="${vendingMachine.numItems() == 0}">No Items Available</h3>
+
+    <table th:if="${vendingMachine.numItems() > 0}">
+        <tbody>
+            <tr th:each="item,i : ${vendingMachine.getItems()}">
+                <td><div th:text="${i.index + 1}"></div></td>
+                <td><span th:text="${item}"></span></td>
+            </tr>
+        </tbody>
+    </table>
+
     <script src="javascript/app/vending-machine.js"></script>
 
 </body>
