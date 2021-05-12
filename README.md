@@ -10,3 +10,7 @@ Open browser to localhost:8080
 # To Run Tests:
 In terminal: ./gradlew test
 View report in browser: file:///{{Project dir}}/spring_demo/build/reports/tests/test/index.html
+
+
+# To Compile SCSS:
+In terminal, navigate to /src/main/resources/static, and type 'sass --watch scss:css'
